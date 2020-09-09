@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+	.container{
+		background-color: transparent;
+		width: 200px;
+		height: 500px;
+		border: ridge;
+		margin-top: 10%;
+	}
+	.calculator{
+		padding: 10px;
+	}
+	.calculator input{
+		margin: 5px auto;
+		padding-left: 14px;
+		padding-right: 14px;
+		width: 45px;
+	}
+	#result input{
+		padding: 5px;
+	}
+	.values{
+		padding: 10px;
+	}
+	input{
+		border: 2px solid transparent;
+		border-radius: 5px;
+
+	}
+	.calculator input:hover{
+		background-color: orange;
+		color: white;
+	}
+	
+	::placeholder{
+		padding-left: 90%;
+	}
+	
+</style>
+<body>
+<div class="container bg-secondary">
+ <h2 class="text-warning text-center">Calculator</h2>
+ <hr style="background-color: yellow;">
+ <form name="calci">
+ <input type="text" name="result" id="result" placeholder="0">
+ <div class="calculator">
+ <input type="button" value="1" class = "values"  onclick="calci.result.value += '1'">
+ <input type="button" value="2" class = "values"  onclick="calci.result.value += '2'">
+ <input type="button" value="3" class = "values"  onclick="calci.result.value += '3'">
+
+ <input type="button" value="4" class = "values"  onclick="calci.result.value += '4'">
+ <input type="button" value="5" class = "values"  onclick="calci.result.value += '5'">
+ <input type="button" value="6" class = "values"  onclick="calci.result.value += '6'">
+
+ <input type="button" value="7" class = "values"  onclick="calci.result.value += '7'">
+ <input type="button" value="8" class = "values"  onclick="calci.result.value += '8'">
+ <input type="button" value="9" class = "values"  onclick="calci.result.value += '9'">
+
+ <input type="button" value="0" class = "values"  onclick="calci.result.value += '0'">
+ <input type="button" value="+" class = "values"  onclick="calci.result.value += '+'">
+ <input type="button" value="-" class = "values"  onclick="calci.result.value += '-'">
+
+ <input type="button" value="*" class = "values"  onclick="calci.result.value += '*'">
+ <input type="button" value="%" class = "values"  onclick="calci.result.value += '%'">
+ <input type="button" value="/" class = "values"  onclick="calci.result.value += '/'">
+ <input type="button" value="=" class = "values"  onclick="calci.result.value = eval(calci.result.value);">
+
+ <button type="button"  class = "values btn btn-outline-warning text-white" id="clear" onclick="calci.result.value = '' " style="width: 90px;">clear</button>
+
+
+		
+</form>
+</div>
+		
+		
+		
+	</div>
+	
+
+</body>
+</html>
