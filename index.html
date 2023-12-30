@@ -1,3 +1,18 @@
+/*
+  To Deploy this on server or aws , You Need an Apache server.
+  For Deploying on aws 
+  1.Create a Linux EC2 and add Inbound Traffic rules to Port 80.
+  2.Install apache server on your EC2
+    - sudo apt update.
+    - sudo apt install apache2.
+    - clone git https://github.com/mashoodkhan/calculator.github.io ( To Clone this Repo on your ec2)
+      Now Copy your html file to /var/www/html directory, It is default dir for serving web content on
+      Linux. To Copy write below command. 
+    - sudo cp -r /path/to/your/app / var/www/html 
+    - sudo chwon -R www-data:www-data /var/www/html
+    - sudo service apache2 restart
+Now Run on browser - yourec2publicip:80
+*/
 <!DOCTYPE html>
 <html>
 <head>
